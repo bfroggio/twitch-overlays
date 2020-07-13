@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: rgba(0, 0, 0, 0);
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+        font-size: 15vw;
+        font-family: "Roboto Slab", serif;
+      }
+
+      img {
+        margin-top: 1vw;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      presented by<br />
+      <img src="images/compycore.png" />
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(verticallyCenter);
+    $(window).resize(verticallyCenter);
+
+    function verticallyCenter() {
+      $("#container").css({
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        "margin-left": -$("#container").outerWidth() / 2,
+        "margin-top": -$("#container").outerHeight() / 2
+      });
+    }
+
+    setInterval(function() {
+        $("#container").fadeToggle(2000, function() {});
+    }, 30 * 1000);
+  </script>
+</html>
