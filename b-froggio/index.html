@@ -3,50 +3,70 @@
   <head>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Modak&display=swap"
       rel="stylesheet"
     />
 
     <style>
       body {
         background: rgba(0, 0, 0, 0);
-        margin: 0;
-        padding: 0;
+        color: #ffffff;
+        overflow: hidden;
       }
 
-      #container {
-        height: 100%;
-        width: 100%;
-        color: #000000;
-        text-align: center;
-        font-size: 50vh;
-        vertical-align: middle;
-        display: table-cell;
-        font-family: "Roboto Slab", serif;
+      #username {
+        vertical-align: top;
+        margin-left: 2vw;
+        font-size: 75vh;
+        font-family: "Modak", cursive;
       }
 
-      img {
-        height: 80%;
+      .animated {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+      }
+
+      @keyframes wobble {
+        0% {
+          transform: rotate(5deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+        100% {
+          transform: rotate(5deg);
+        }
+      }
+
+      .wobble {
+        -webkit-animation-name: wobble;
+        animation-name: wobble;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-      <div id="avatar"><img src="images/avatar.png" /></div><div>B-Froggio</div>
-    </div>
+    <center>
+      <img id="avatar" class="animated wobble" src="images/avatar.png" /><span
+        id="username"
+        >B-Froggio</span
+      >
+    </center>
   </body>
 
   <script>
-    $(document).ready(verticallyCenter);
-    $(window).resize(verticallyCenter);
+    $(document).ready(positionAvatar);
+    $(window).resize(positionAvatar);
 
-    function verticallyCenter() {
-      $("#container").css({
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        "margin-left": -$("#container").outerWidth() / 2,
-        "margin-top": -$("#container").outerHeight() / 2
+    function positionAvatar() {
+      $("#avatar").css({
+        height: window.innerHeight * 0.8,
+        "margin-top": window.innerHeight * 0.1
       });
     }
   </script>
