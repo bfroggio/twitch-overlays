@@ -8,6 +8,10 @@
     />
 
     <style>
+      body {
+        background-color: #000000;
+      }
+
       #container {
         position: absolute;
         left: 0;
@@ -16,20 +20,26 @@
         height: 100%;
         color: #ffffff;
         text-align: center;
+        font-size: 15vw;
         font-family: "Roboto Slab", serif;
+      }
+
+      img {
+        margin-top: 1vh;
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <div id="container">
       presented by<br />
-      <img src="images/michael-wink.png" />
+      <img src="images/compycore.png" />
     </div>
   </body>
 
   <script>
     setInterval(function() {
-      alert("Hello");
-    }, 3000);
+      $("#container").fadeToggle(2000, function() {});
+    }, 10 * 1000);
   </script>
 </html>
