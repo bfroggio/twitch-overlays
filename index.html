@@ -9,15 +9,11 @@
 
     <style>
       body {
-        background: rgba(255, 255, 255, 0);
+        background: rgba(0, 0, 0, 1);
       }
 
       #container {
-        position: absolute;
-        left: 0;
-        top: 0;
         width: 100%;
-        height: 100%;
         color: #ffffff;
         text-align: center;
         font-size: 15vw;
@@ -25,7 +21,7 @@
       }
 
       img {
-        margin-top: 1vh;
+        margin-top: 1vw;
         width: 100%;
       }
     </style>
@@ -38,6 +34,19 @@
   </body>
 
   <script>
+    $(document).ready(verticallyCenter);
+    $(window).resize(verticallyCenter);
+
+    function verticallyCenter() {
+      $("#container").css({
+        position: "absolute",
+        left: "50%",
+        top: "50%",
+        "margin-left": -$("#container").outerWidth() / 2,
+        "margin-top": -$("#container").outerHeight() / 2
+      });
+    }
+
     setInterval(function() {
       $("#container").fadeToggle(2000, function() {});
     }, 10 * 1000);
