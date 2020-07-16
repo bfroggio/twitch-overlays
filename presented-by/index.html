@@ -12,14 +12,34 @@
         background: rgba(0, 0, 0, 0);
         margin: 0;
         padding: 0;
+        overflow: hidden;
       }
 
       #container {
-        width: 100%;
         color: #ffffff;
         text-align: center;
         font-size: 15vw;
         font-family: "Roboto Slab", serif;
+      }
+
+      .outer {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .inner {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
       }
 
       img {
@@ -29,28 +49,35 @@
     </style>
   </head>
   <body>
-    <div id="container">
-      presented by<br />
-      <img src="images/compycore.png" />
+    <div class="outer">
+      <div class="middle">
+        <div id="container" class="inner">
+          presented by<br />
+          <img id="sponsor-logo" src="images/compycore.png" />
+        </div>
+      </div>
     </div>
   </body>
 
   <script>
-    $(document).ready(verticallyCenter);
-    $(window).resize(verticallyCenter);
-
-    function verticallyCenter() {
-      $("#container").css({
-        position: "absolute",
-        left: "50%",
-        top: "50%",
-        "margin-left": -$("#container").outerWidth() / 2,
-        "margin-top": -$("#container").outerHeight() / 2
-      });
-    }
+    var sponsors = ["compycore.png", "milk-bar.png"];
+    var displayingSponsor = 0;
 
     setInterval(function() {
-        $("#container").fadeToggle(2000, function() {});
+      $("#container").fadeToggle(2000, function() {
+        if ($("#container").css("display") == "none") {
+          if (displayingSponsor < sponsors.length - 1) {
+            displayingSponsor++;
+          } else {
+            displayingSponsor = 0;
+          }
+
+          $("#sponsor-logo").attr(
+            "src",
+            "images/" + sponsors[displayingSponsor]
+          );
+        }
+      });
     }, 30 * 1000);
   </script>
 </html>
