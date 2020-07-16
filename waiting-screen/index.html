@@ -8,7 +8,23 @@
     />
 
     <style>
-      #container {
+      .outer {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .inner {
+        margin-left: auto;
+        margin-right: auto;
         width: 100%;
       }
 
@@ -75,38 +91,31 @@
     </style>
   </head>
   <body>
-    <div id="container">
-      <center>
-        <img id="avatar" class="animated wobble" src="images/avatar.png" />
-      </center>
-      <div id="message">Be right back!</div>
+    <div class="outer">
+      <div class="middle">
+        <div id="container" class="inner">
+          <center>
+            <img id="avatar" class="animated wobble" src="images/avatar.png" />
+          </center>
+          <div id="message">Be right back!</div>
+        </div>
+      </div>
     </div>
   </body>
 
   <script>
-        $(document).ready(verticallyCenter);
-        $(window).resize(verticallyCenter);
-
-        $(document).ready($("#message").html(getParameterByName("message") || "Be right back!"));
-
-        function verticallyCenter() {
-          $("#container").css({
-            position: "absolute",
-            left: "50%",
-            top: "50%",
-            "margin-left": -$("#container").outerWidth() / 2,
-            "margin-top": -$("#container").outerHeight() / 2
-          });
-        }
+    $(document).ready(
+      $("#message").html(getParameterByName("message") || "Be right back!")
+    );
 
     function getParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, '\\$&');
-        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return "";
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
     }
   </script>
 </html>
