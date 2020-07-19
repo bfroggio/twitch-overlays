@@ -89,21 +89,20 @@
     var displayingSponsor = 0;
 
     setInterval(function() {
-      if (displayingSponsor < sponsors.length - 1) {
-        displayingSponsor++;
-      } else {
-        displayingSponsor = 0;
-      }
+      $("#drawer-content").animate({ "margin-left": -200 }, "slow", function() {
+        if (displayingSponsor < sponsors.length - 1) {
+          displayingSponsor++;
+        } else {
+          displayingSponsor = 0;
+        }
 
-      $("#sponsor-logo").attr("src", "../images/" + sponsors[displayingSponsor]);
+        $("#sponsor-logo").attr(
+          "src",
+          "../images/" + sponsors[displayingSponsor]
+        );
 
-      var expanded = true;
-
-      if (expanded) {
-        $("#drawer-content").animate({ "margin-left": -200 }, "slow");
-      } else {
         $("#drawer-content").animate({ "margin-left": 0 }, "slow");
-      }
-    }, 5 * 1000);
+      });
+    }, 3 * 1000);
   </script>
 </html>
