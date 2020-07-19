@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background: rgba(0, 0, 0, 0);
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      #container {
+        width: 400px;
+        position: relative;
+      }
+
+      #drawer {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        overflow-x: hidden; /* Needed for initial hidden state */
+        border-left: 0.25vw solid #000;
+      }
+
+      #drawer > div {
+        float: left;
+      }
+
+      #drawer-content {
+        width: 200px;
+        margin-left: -200px; /* -width */
+      }
+
+      #drawer-content > p {
+        padding: 10px;
+      }
+
+      .outer {
+        display: table;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      .middle {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .inner {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+
+      img {
+        margin-top: 1vw;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="outer">
+        <div class="middle">
+          <div class="inner">
+            <img src="../images/avatar.png" />
+            <p>Click on the slider!</p>
+          </div>
+        </div>
+      </div>
+      <div id="drawer">
+        <div id="drawer-content">
+          <p>
+            <img id="sponsor-logo" src="../images/compycore.png" />
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+            laboriosam tempore porro minima saepe culpa consectetur. Impedit
+            ipsa quisquam tenetur cumque odit cum aliquam enim inventore
+            asperiores perferendis quos quaerat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var sponsors = ["compycore.png", "milk-bar.png"];
+    var displayingSponsor = 0;
+
+    setInterval(function() {
+      if (displayingSponsor < sponsors.length - 1) {
+        displayingSponsor++;
+      } else {
+        displayingSponsor = 0;
+      }
+
+      $("#sponsor-logo").attr("src", "images/" + sponsors[displayingSponsor]);
+
+      var expanded = false;
+
+      if ((expanded = !expanded)) {
+        $("#drawer-content").animate({ "margin-left": 0 }, "slow");
+      } else {
+        $("#drawer-content").animate({ "margin-left": -200 }, "slow");
+      }
+    }, 5 * 1000);
+  </script>
+</html>
