@@ -24,7 +24,7 @@
         position: absolute;
         left: 50%;
         top: 0;
-        overflow-x: hidden; /* Needed for initial hidden state */
+        overflow-x: hidden;
         border-left: 0.25vw solid #000;
       }
 
@@ -34,16 +34,12 @@
 
       #drawer-content {
         width: 200px;
-        margin-left: -200px; /* -width */
-      }
-
-      #drawer-content > p {
-        padding: 10px;
+        margin-left: 0;
       }
 
       .outer {
         display: table;
-        position: absolute;
+        position: relative;
         top: 0;
         left: 0;
         height: 100%;
@@ -62,7 +58,6 @@
       }
 
       img {
-        margin-top: 1vw;
         width: 100%;
       }
     </style>
@@ -73,19 +68,18 @@
         <div class="middle">
           <div class="inner">
             <img src="../images/avatar.png" />
-            <p>Click on the slider!</p>
           </div>
         </div>
       </div>
       <div id="drawer">
         <div id="drawer-content">
-          <p>
-            <img id="sponsor-logo" src="../images/compycore.png" />
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-            laboriosam tempore porro minima saepe culpa consectetur. Impedit
-            ipsa quisquam tenetur cumque odit cum aliquam enim inventore
-            asperiores perferendis quos quaerat.
-          </p>
+          <div class="outer">
+            <div class="middle">
+              <div class="inner">
+                <img id="sponsor-logo" src="../images/compycore.png" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -101,14 +95,14 @@
         displayingSponsor = 0;
       }
 
-      $("#sponsor-logo").attr("src", "images/" + sponsors[displayingSponsor]);
+      $("#sponsor-logo").attr("src", "../images/" + sponsors[displayingSponsor]);
 
-      var expanded = false;
+      var expanded = true;
 
-      if ((expanded = !expanded)) {
-        $("#drawer-content").animate({ "margin-left": 0 }, "slow");
-      } else {
+      if (expanded) {
         $("#drawer-content").animate({ "margin-left": -200 }, "slow");
+      } else {
+        $("#drawer-content").animate({ "margin-left": 0 }, "slow");
       }
     }, 5 * 1000);
   </script>
