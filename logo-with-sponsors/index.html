@@ -33,6 +33,8 @@
         text-align: center;
         font-size: 5vw;
         font-family: "Roboto Slab", serif;
+        box-sizing: border-box;
+        padding: 3vw;
       }
 
       #drawer {
@@ -115,11 +117,15 @@
     </div>
   </body>
   <script>
-    var sponsors = [ "milk-bar.png", "compycore.png" ];
+    var sponsors = ["milk-bar.png", "compycore.png"];
     var displayingSponsor = 0;
     var animationSpeed = 500;
 
     $(window).on("load", function() {
+      fixHeight();
+    });
+
+    $(window).on("resize", function() {
       fixHeight();
     });
 
