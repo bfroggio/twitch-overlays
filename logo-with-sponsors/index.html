@@ -28,18 +28,11 @@
         border-right: 0.5vw solid #000;
       }
 
-      #presented-by {
+      #sponsor-container {
         color: #ffffff;
         text-align: center;
         font-size: 5vw;
         font-family: "Roboto Slab", serif;
-      }
-
-      #sponsor-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
       }
 
       #drawer {
@@ -82,9 +75,14 @@
         width: 100%;
       }
 
-      img {
+      #avatar-container img {
         width: 100%;
         height: auto;
+      }
+
+      #sponsored-logo-container img {
+        width: auto;
+        height: 100%;
       }
     </style>
   </head>
@@ -102,12 +100,12 @@
       <div id="drawer-content">
         <div class="outer">
           <div class="middle">
-            <div id="container" class="inner">
-              <div id="presented-by">
-                presented by</br>
+            <div id="sponsor-container" class="inner">
+              <div id="sponsored-by">
+                presented by
               </div>
-              <div id="sponsor-container">
-                <img id="sponsor-logo" src="../images/compycore.png" />
+              <div id="sponsored-logo-container">
+                <img id="sponsor-logo" src="../images/milk-bar.png" />
               </div>
             </div>
           </div>
@@ -116,17 +114,21 @@
     </div>
   </body>
   <script>
-    var sponsors = ["compycore.png", "milk-bar.png"];
+    var sponsors = [ "milk-bar.png", "compycore.png" ];
     var displayingSponsor = 0;
     var animationSpeed = 500;
 
-/*
     $(window).on("load", function() {
-      $("#sponsor-container").css({
-        maxHeight: $("#avatar-container").outerHeight()-5vw
-      });
+      fixHeight();
     });
-    */
+
+    function fixHeight() {
+      $("#sponsored-logo-container").css({
+        height:
+          $("#avatar-container").outerHeight() -
+          $("#sponsored-by").outerHeight()
+      });
+    }
 
     setInterval(function() {
       $("#drawer-content").animate(
