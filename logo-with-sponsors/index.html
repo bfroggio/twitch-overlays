@@ -21,11 +21,34 @@
         top: 0;
         height: 100%;
         width: 50%;
-        z-index: 999;
       }
 
-      #avatar-image {
-        border-right: 0.5vw solid #000;
+      .animated {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        -moz-animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+        -o-animation-iteration-count: infinite;
+      }
+
+      @keyframes wobble {
+        0% {
+          transform: rotate(5deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+        100% {
+          transform: rotate(5deg);
+        }
+      }
+
+      .wobble {
+        -webkit-animation-name: wobble;
+        animation-name: wobble;
       }
 
       #sponsor-container {
@@ -37,6 +60,18 @@
         padding: 3vw;
       }
 
+      #divider {
+        width: 1vw;
+        height: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background-color: #000;
+        z-index: 999;
+      }
+
       #drawer {
         position: absolute;
         left: 50%;
@@ -44,7 +79,6 @@
         height: 100%;
         width: 50%;
         overflow-x: hidden;
-        z-index: 1;
       }
 
       #drawer > div {
@@ -90,11 +124,16 @@
     </style>
   </head>
   <body>
+    <div id="divider"></div>
     <div id="avatar">
       <div class="outer">
         <div class="middle">
           <div id="avatar-container" class="inner">
-            <img id="avatar-image" src="../images/avatar.png" />
+            <img
+              id="avatar-image"
+              class="animated wobble"
+              src="../images/avatar.png"
+            />
           </div>
         </div>
       </div>
@@ -134,6 +173,10 @@
         height:
           $("#avatar-container").outerHeight() -
           $("#sponsored-by").outerHeight()
+      });
+
+      $("#divider").css({
+        height: $("#avatar-container").outerHeight()
       });
     }
 
