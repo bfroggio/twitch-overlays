@@ -9,23 +9,47 @@
 
     <style>
       body {
-        background: rgba(0, 0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
         margin: 0;
         padding: 0;
         overflow: hidden;
       }
 
-      #container {
-        width: 400px;
-        position: relative;
+      #avatar {
+        position: absolute;
+        left: 0%;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        z-index: 999;
+      }
+
+      #avatar-image {
+        border-right: 0.5vw solid #000;
+      }
+
+      #presented-by {
+        color: #ffffff;
+        text-align: center;
+        font-size: 5vw;
+        font-family: "Roboto Slab", serif;
+      }
+
+      #sponsor-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
       }
 
       #drawer {
         position: absolute;
         left: 50%;
         top: 0;
+        height: 100%;
+        width: 50%;
         overflow-x: hidden;
-        border-left: 0.25vw solid #000;
+        z-index: 1;
       }
 
       #drawer > div {
@@ -33,7 +57,8 @@
       }
 
       #drawer-content {
-        width: 200px;
+        width: 100%;
+        height: 100%;
         margin-left: 0;
       }
 
@@ -59,23 +84,29 @@
 
       img {
         width: 100%;
+        height: auto;
       }
     </style>
   </head>
   <body>
-    <div id="container">
+    <div id="avatar">
       <div class="outer">
         <div class="middle">
-          <div class="inner">
-            <img src="../images/avatar.png" />
+          <div id="avatar-container" class="inner">
+            <img id="avatar-image" src="../images/avatar.png" />
           </div>
         </div>
       </div>
-      <div id="drawer">
-        <div id="drawer-content">
-          <div class="outer">
-            <div class="middle">
-              <div class="inner">
+    </div>
+    <div id="drawer">
+      <div id="drawer-content">
+        <div class="outer">
+          <div class="middle">
+            <div id="container" class="inner">
+              <div id="presented-by">
+                presented by</br>
+              </div>
+              <div id="sponsor-container">
                 <img id="sponsor-logo" src="../images/compycore.png" />
               </div>
             </div>
@@ -87,22 +118,35 @@
   <script>
     var sponsors = ["compycore.png", "milk-bar.png"];
     var displayingSponsor = 0;
+    var animationSpeed = 500;
+
+/*
+    $(window).on("load", function() {
+      $("#sponsor-container").css({
+        maxHeight: $("#avatar-container").outerHeight()-5vw
+      });
+    });
+    */
 
     setInterval(function() {
-      $("#drawer-content").animate({ "margin-left": -200 }, "slow", function() {
-        if (displayingSponsor < sponsors.length - 1) {
-          displayingSponsor++;
-        } else {
-          displayingSponsor = 0;
+      $("#drawer-content").animate(
+        { "margin-left": -$("#drawer-content").outerWidth() },
+        animationSpeed,
+        function() {
+          if (displayingSponsor < sponsors.length - 1) {
+            displayingSponsor++;
+          } else {
+            displayingSponsor = 0;
+          }
+
+          $("#sponsor-logo").attr(
+            "src",
+            "../images/" + sponsors[displayingSponsor]
+          );
+
+          $("#drawer-content").animate({ "margin-left": 0 }, animationSpeed);
         }
-
-        $("#sponsor-logo").attr(
-          "src",
-          "../images/" + sponsors[displayingSponsor]
-        );
-
-        $("#drawer-content").animate({ "margin-left": 0 }, "slow");
-      });
+      );
     }, 3 * 1000);
   </script>
 </html>
