@@ -14,8 +14,8 @@
         "id": "wasapi_input_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": false,
-        "name": "Mic/Aux",
+        "muted": true,
+        "name": "VoiceMeeter Output (Mic)",
         "prev_ver": 419430408,
         "private_settings": {},
         "push-to-mute": false,
@@ -24,6 +24,91 @@
         "push-to-talk-delay": 0,
         "settings": {
             "device_id": "{0.0.1.00000000}.{a6bfe604-a222-42c8-b3fc-ac6a2ebd2a16}"
+        },
+        "sync": 0,
+        "versioned_id": "wasapi_input_capture",
+        "volume": 1.0
+    },
+    "AuxAudioDevice2": {
+        "balance": 0.5,
+        "deinterlace_field_order": 0,
+        "deinterlace_mode": 0,
+        "enabled": true,
+        "flags": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
+        },
+        "id": "wasapi_input_capture",
+        "mixers": 255,
+        "monitoring_type": 1,
+        "muted": false,
+        "name": "Virtual Audio Cable (Mic Spam Monitor)",
+        "prev_ver": 419430408,
+        "private_settings": {},
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "settings": {
+            "device_id": "{0.0.1.00000000}.{24b1a251-b7c5-4230-9193-4145170c6d5b}"
+        },
+        "sync": 0,
+        "versioned_id": "wasapi_input_capture",
+        "volume": 1.0
+    },
+    "AuxAudioDevice3": {
+        "balance": 0.5,
+        "deinterlace_field_order": 0,
+        "deinterlace_mode": 0,
+        "enabled": true,
+        "filters": [
+            {
+                "balance": 0.5,
+                "deinterlace_field_order": 0,
+                "deinterlace_mode": 0,
+                "enabled": true,
+                "flags": 0,
+                "hotkeys": {},
+                "id": "noise_gate_filter",
+                "mixers": 255,
+                "monitoring_type": 0,
+                "muted": false,
+                "name": "Noise Gate",
+                "prev_ver": 419430408,
+                "private_settings": {},
+                "push-to-mute": false,
+                "push-to-mute-delay": 0,
+                "push-to-talk": false,
+                "push-to-talk-delay": 0,
+                "settings": {},
+                "sync": 0,
+                "versioned_id": "noise_gate_filter",
+                "volume": 1.0
+            }
+        ],
+        "flags": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": [],
+            "libobs.unmute": []
+        },
+        "id": "wasapi_input_capture",
+        "mixers": 255,
+        "monitoring_type": 0,
+        "muted": false,
+        "name": "USB Sound Card (Mic)",
+        "prev_ver": 419430408,
+        "private_settings": {},
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "settings": {
+            "device_id": "{0.0.1.00000000}.{23528173-93be-41cc-b65d-aa59d3ecef00}"
         },
         "sync": 0,
         "versioned_id": "wasapi_input_capture",
@@ -44,7 +129,7 @@
         "id": "wasapi_output_capture",
         "mixers": 255,
         "monitoring_type": 0,
-        "muted": true,
+        "muted": false,
         "name": "Desktop Audio",
         "prev_ver": 419430408,
         "private_settings": {},
@@ -59,8 +144,8 @@
         "versioned_id": "wasapi_output_capture",
         "volume": 1.0
     },
-    "current_program_scene": "PC Games",
-    "current_scene": "PC Games",
+    "current_program_scene": "Rocket League",
+    "current_scene": "Rocket League",
     "current_transition": "Fade",
     "groups": [],
     "modules": {
@@ -125,7 +210,10 @@
             "name": "Elgato Games"
         },
         {
-            "name": "PC Games"
+            "name": "Rocket League"
+        },
+        {
+            "name": "Elite Dangerous"
         },
         {
             "name": "Testing"
@@ -138,6 +226,191 @@
         }
     ],
     "sources": [
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.B-Froggio": [],
+                "libobs.hide_scene_item.Game Capture": [],
+                "libobs.hide_scene_item.Logo/Sponsors": [],
+                "libobs.hide_scene_item.Presented By": [],
+                "libobs.hide_scene_item.Webcam": [],
+                "libobs.show_scene_item.B-Froggio": [],
+                "libobs.show_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Logo/Sponsors": [],
+                "libobs.show_scene_item.Presented By": [],
+                "libobs.show_scene_item.Webcam": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Elite Dangerous",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 7,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "Game Capture",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "Presented By",
+                        "pos": {
+                            "x": 91.0,
+                            "y": 423.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.54500001668930054,
+                            "y": 0.54500001668930054
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": false,
+                        "name": "Webcam",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": false,
+                        "name": "B-Froggio",
+                        "pos": {
+                            "x": 1460.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.61333334445953369,
+                            "y": 0.61333334445953369
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": false,
+                        "name": "Logo/Sponsors",
+                        "pos": {
+                            "x": 1632.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.72000002861022949,
+                            "y": 0.72000002861022949
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
         {
             "balance": 0.5,
             "deinterlace_field_order": 0,
@@ -164,7 +437,7 @@
             "settings": {
                 "css": "",
                 "height": 1600,
-                "url": "https://jessemillar.github.io/twitch-overlays/waiting-screen?message=Testing some things!",
+                "url": "https://jessemillar.github.io/twitch-overlays/waiting-screen?message=Testing audio!",
                 "width": 3840
             },
             "sync": 0,
@@ -213,9 +486,7 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Be Right Back Screen": [],
-                "libobs.hide_scene_item.Virtual Audio Cable": [],
-                "libobs.show_scene_item.Be Right Back Screen": [],
-                "libobs.show_scene_item.Virtual Audio Cable": []
+                "libobs.show_scene_item.Be Right Back Screen": []
             },
             "id": "scene",
             "mixers": 0,
@@ -232,35 +503,6 @@
                 "custom_size": false,
                 "id_counter": 2,
                 "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "Virtual Audio Cable",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
                     {
                         "align": 5,
                         "bounds": {
@@ -338,9 +580,7 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Starting Soon Screen": [],
-                "libobs.hide_scene_item.Virtual Audio Cable": [],
-                "libobs.show_scene_item.Starting Soon Screen": [],
-                "libobs.show_scene_item.Virtual Audio Cable": []
+                "libobs.show_scene_item.Starting Soon Screen": []
             },
             "id": "scene",
             "mixers": 0,
@@ -357,35 +597,6 @@
                 "custom_size": false,
                 "id_counter": 8,
                 "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "Virtual Audio Cable",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
                     {
                         "align": 5,
                         "bounds": {
@@ -480,6 +691,7 @@
             "settings": {
                 "css": "",
                 "height": 1200,
+                "restart_when_active": true,
                 "shutdown": true,
                 "url": "https://jessemillar.github.io/twitch-overlays/presented-by"
             },
@@ -560,12 +772,12 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.B-Froggio": [],
                 "libobs.hide_scene_item.Elgato": [],
+                "libobs.hide_scene_item.Logo/Sponsors": [],
                 "libobs.hide_scene_item.Presented By": [],
-                "libobs.hide_scene_item.Virtual Audio Cable": [],
                 "libobs.show_scene_item.B-Froggio": [],
                 "libobs.show_scene_item.Elgato": [],
-                "libobs.show_scene_item.Presented By": [],
-                "libobs.show_scene_item.Virtual Audio Cable": []
+                "libobs.show_scene_item.Logo/Sponsors": [],
+                "libobs.show_scene_item.Presented By": []
             },
             "id": "scene",
             "mixers": 0,
@@ -580,7 +792,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 6,
+                "id_counter": 7,
                 "items": [
                     {
                         "align": 5,
@@ -624,35 +836,6 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 4,
-                        "locked": false,
-                        "name": "Virtual Audio Cable",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
                         "id": 5,
                         "locked": false,
                         "name": "B-Froggio",
@@ -667,7 +850,7 @@
                             "y": 0.36666667461395264
                         },
                         "scale_filter": "disable",
-                        "visible": true
+                        "visible": false
                     },
                     {
                         "align": 5,
@@ -696,6 +879,35 @@
                             "y": 0.37333333492279053
                         },
                         "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": false,
+                        "name": "Logo/Sponsors",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.39750000834465027,
+                            "y": 0.39800000190734863
+                        },
+                        "scale_filter": "disable",
                         "visible": true
                     }
                 ]
@@ -715,21 +927,21 @@
                 "libobs.hide_scene_item.B-Froggio": [],
                 "libobs.hide_scene_item.Controller Preview": [],
                 "libobs.hide_scene_item.Game Capture": [],
+                "libobs.hide_scene_item.Logo/Sponsors": [],
                 "libobs.hide_scene_item.Presented By": [],
-                "libobs.hide_scene_item.Virtual Audio Cable": [],
                 "libobs.hide_scene_item.Webcam": [],
                 "libobs.show_scene_item.B-Froggio": [],
                 "libobs.show_scene_item.Controller Preview": [],
                 "libobs.show_scene_item.Game Capture": [],
+                "libobs.show_scene_item.Logo/Sponsors": [],
                 "libobs.show_scene_item.Presented By": [],
-                "libobs.show_scene_item.Virtual Audio Cable": [],
                 "libobs.show_scene_item.Webcam": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "PC Games",
+            "name": "Rocket League",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -738,37 +950,8 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 7,
+                "id_counter": 8,
                 "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 5,
-                        "locked": false,
-                        "name": "Virtual Audio Cable",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
                     {
                         "align": 5,
                         "bounds": {
@@ -815,14 +998,14 @@
                         "locked": false,
                         "name": "Controller Preview",
                         "pos": {
-                            "x": 0.0,
-                            "y": 1248.0
+                            "x": 1760.5,
+                            "y": 1418.5
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.77249997854232788,
-                            "y": 0.77333331108093262
+                            "x": 0.39875000715255737,
+                            "y": 0.398333340883255
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -854,7 +1037,7 @@
                             "y": 0.54500001668930054
                         },
                         "scale_filter": "disable",
-                        "visible": true
+                        "visible": false
                     },
                     {
                         "align": 5,
@@ -912,6 +1095,35 @@
                             "y": 0.61333334445953369
                         },
                         "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 8,
+                        "locked": false,
+                        "name": "Logo/Sponsors",
+                        "pos": {
+                            "x": 36.0,
+                            "y": 1277.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.64625000953674316,
+                            "y": 0.64600002765655518
+                        },
+                        "scale_filter": "disable",
                         "visible": true
                     }
                 ]
@@ -951,6 +1163,38 @@
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
             "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": true,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "color_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Color Correction",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "brightness": -0.84999999999999998,
+                        "color": 4290889649,
+                        "contrast": 0.32000000000000001,
+                        "gamma": 2.5600000000000001,
+                        "hue_shift": 0.0,
+                        "saturation": -0.80000000000000004
+                    },
+                    "sync": 0,
+                    "versioned_id": "color_filter",
+                    "volume": 1.0
+                }
+            ],
             "flags": 0,
             "hotkeys": {
                 "libobs.mute": [],
@@ -987,9 +1231,7 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Testing Screen": [],
-                "libobs.hide_scene_item.Virtual Audio Cable": [],
-                "libobs.show_scene_item.Testing Screen": [],
-                "libobs.show_scene_item.Virtual Audio Cable": []
+                "libobs.show_scene_item.Testing Screen": []
             },
             "id": "scene",
             "mixers": 0,
@@ -1006,35 +1248,6 @@
                 "custom_size": false,
                 "id_counter": 3,
                 "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": false,
-                        "name": "Virtual Audio Cable",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
                     {
                         "align": 5,
                         "bounds": {
@@ -1082,11 +1295,11 @@
                 "libobs.push-to-talk": [],
                 "libobs.unmute": []
             },
-            "id": "wasapi_input_capture",
+            "id": "browser_source",
             "mixers": 255,
-            "monitoring_type": 2,
+            "monitoring_type": 0,
             "muted": false,
-            "name": "Virtual Audio Cable",
+            "name": "Logo/Sponsors",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -1094,10 +1307,12 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "device_id": "{0.0.1.00000000}.{24b1a251-b7c5-4230-9193-4145170c6d5b}"
+                "css": "",
+                "height": 500,
+                "url": "https://jessemillar.github.io/twitch-overlays/logo-with-sponsors"
             },
             "sync": 0,
-            "versioned_id": "wasapi_input_capture",
+            "versioned_id": "browser_source",
             "volume": 1.0
         }
     ],
