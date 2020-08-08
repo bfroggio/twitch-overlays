@@ -3,7 +3,10 @@
   <head>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaldi:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       .outer {
@@ -81,7 +84,7 @@
         font-size: 20vh;
         text-align: center;
         font-family: "Jaldi", cursive;
-        color: #FFE66D;
+        color: #ffe66d;
       }
     </style>
   </head>
@@ -103,9 +106,15 @@
   </body>
 
   <script>
-    $(document).ready(
-      $("#message").html(getParameterByName("message") || "B-Right back!")
-    );
+    $(document).ready(init());
+
+    function init() {
+      if (getParameterByName("blank") == "true") {
+        $("#container").hide();
+      } else {
+        $("#message").html(getParameterByName("message") || "B-Right back!");
+      }
+    }
 
     function getParameterByName(name, url) {
       if (!url) url = window.location.href;
