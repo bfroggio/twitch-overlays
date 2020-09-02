@@ -2,26 +2,11 @@
 <html lang="en">
   <head>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Modak&display=swap"
-      rel="stylesheet"
-    />
 
     <style>
       body {
         background: rgba(0, 0, 0, 0);
         overflow: hidden;
-      }
-
-      #username {
-        vertical-align: top;
-        margin-left: 2vw;
-        font-size: 75vh;
-        font-family: "Modak", cursive;
-        color: #f3e8c8;
-        text-shadow: -1.3vh -1.3vh 0 #000, 0 -1.3vh 0 #000, 1.3vh -1.3vh 0 #000,
-          1.3vh 0 0 #000, 1.3vh 1.3vh 0 #000, 0 1.3vh 0 #000,
-          -1.3vh 1.3vh 0 #000, -1.3vh 0 0 #000;
       }
 
       .animated {
@@ -51,6 +36,10 @@
         -webkit-animation-name: wobble;
         animation-name: wobble;
       }
+
+      #avatar {
+        width: 80%;
+      }
     </style>
   </head>
   <body>
@@ -58,16 +47,4 @@
       <img id="avatar" class="animated wobble" src="../images/avatar.png" />
     </center>
   </body>
-
-  <script>
-    $(document).ready(positionAvatar);
-    $(window).resize(positionAvatar);
-
-    function positionAvatar() {
-      $("#avatar").css({
-        height: window.innerHeight * 0.8,
-        "margin-top": window.innerHeight * 0.1
-      });
-    }
-  </script>
 </html>
