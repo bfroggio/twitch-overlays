@@ -437,7 +437,7 @@
             "settings": {
                 "css": "",
                 "height": 1600,
-                "url": "https://jessemillar.github.io/twitch-overlays/waiting-screen?message=Testing audio!",
+                "url": "https://bfroggio.github.io/twitch-overlays/waiting-screen?message=Testing audio!",
                 "width": 3840
             },
             "sync": 0,
@@ -470,7 +470,7 @@
             "settings": {
                 "css": "",
                 "height": 1600,
-                "url": "https://jessemillar.github.io/twitch-overlays/waiting-screen?message=Stream starting soon!",
+                "url": "https://bfroggio.github.io/twitch-overlays/waiting-screen?message=Stream starting soon!",
                 "width": 3840
             },
             "sync": 0,
@@ -564,7 +564,7 @@
             "settings": {
                 "css": "",
                 "height": 1600,
-                "url": "https://jessemillar.github.io/twitch-overlays/waiting-screen",
+                "url": "https://bfroggio.github.io/twitch-overlays/waiting-screen",
                 "width": 3840
             },
             "sync": 0,
@@ -658,7 +658,7 @@
             "settings": {
                 "css": "",
                 "height": 300,
-                "url": "https://jessemillar.github.io/twitch-overlays/b-froggio",
+                "url": "https://bfroggio.github.io/twitch-overlays/b-froggio",
                 "width": 1500
             },
             "sync": 0,
@@ -693,7 +693,7 @@
                 "height": 1200,
                 "restart_when_active": true,
                 "shutdown": true,
-                "url": "https://jessemillar.github.io/twitch-overlays/presented-by"
+                "url": "https://bfroggio.github.io/twitch-overlays/presented-by"
             },
             "sync": 0,
             "versioned_id": "browser_source",
@@ -1309,7 +1309,7 @@
             "settings": {
                 "css": "",
                 "height": 500,
-                "url": "https://jessemillar.github.io/twitch-overlays/logo-with-sponsors"
+                "url": "https://bfroggio.github.io/twitch-overlays/logo-with-sponsors"
             },
             "sync": 0,
             "versioned_id": "browser_source",
