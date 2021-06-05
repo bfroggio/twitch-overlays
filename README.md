@@ -9,4 +9,5 @@ This repository contains web files used for overlaying logos and animations onto
 - https://bfroggio.github.io/twitch-overlays/logo
 - https://bfroggio.github.io/twitch-overlays/logo-with-sponsors
 - https://bfroggio.github.io/twitch-overlays/presented-by
+- https://bfroggio.github.io/twitch-overlays/socials
 - https://bfroggio.github.io/twitch-overlays/waiting-screen (`?message=Custom message` or `?blank=true`)
